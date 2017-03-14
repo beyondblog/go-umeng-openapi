@@ -10,7 +10,7 @@ func Test_GetGroupList(t *testing.T) {
 	c := New(NewConfig("YOU EMAIL", "PASSWORD"))
 
 	in := &GetGroupListInput{
-		AppKey:    "583bedb6e88bad684200140b",
+		AppKey:    "YOU APP KEY",
 		StartDate: "2017-03-10",
 		EndDate:   "2017-03-10",
 	}
@@ -23,10 +23,10 @@ func Test_GetGroupData(t *testing.T) {
 	c := New(NewConfig("YOU EMAIL", "PASSWORD"))
 
 	in := &GetDataInput{
-		AppKey:    "583bedb6e88bad684200140b",
+		AppKey:    "YOU APP KEY",
 		StartDate: "2017-03-10",
 		EndDate:   "2017-03-10",
-		GroupId:   "585357ae5312dd614800031f",
+		GroupId:   "YOU APP GROUP ID",
 	}
 	result, err := c.Events.GetData(in)
 	t.Log(result)

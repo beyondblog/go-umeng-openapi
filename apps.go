@@ -28,7 +28,7 @@ type GetAppsOutput struct {
 
 type GetAppBaseDataOutput struct {
 	ToDayActiveUsers     int64 `json:"today_active_users"`     //今日活跃用户
-	YesterDayActiveUsers int64 `json:"yesterday_active_users"` //今日活跃用户
+	YesterDayActiveUsers int64 `json:"yesterday_active_users"` //昨日活跃用户
 	ToDayLaunches        int64 `json:"today_launches"`         //今日启动次数
 	YesterdayLaunches    int64 `json:"yesterday_launches"`     //昨日启动次数
 	ToDayNewUsers        int64 `json:"today_new_users"`        //今日新增用户
