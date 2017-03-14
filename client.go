@@ -11,13 +11,15 @@ import (
 
 type Client struct {
 	*Config
-	Apps *Apps
+	Apps   *Apps
+	Events *Events
 }
 
 // New client.
 func New(config *Config) *Client {
 	c := &Client{Config: config}
 	c.Apps = &Apps{c}
+	c.Events = &Events{c}
 	return c
 }
 
@@ -34,8 +36,6 @@ func (c *Client) get(path string, in interface{}) (io.ReadCloser, error) {
 	}
 	req.Header.Set("Authorization", "Basic "+c.Authorization)
 
-	fmt.Println(url, c.Authorization, form.Encode())
-
 	return c.do(req)
 }
 
@@ -51,8 +51,6 @@ func (c *Client) post(path string, in interface{}) (io.ReadCloser, error) {
 	}
 	req.Header.Set("Authorization", "Basic "+c.Authorization)
 	req.Header.Set("Content-Type", "application/x-www-form-urlencoded")
-
-	fmt.Println(url, c.Authorization, form.Encode())
 
 	return c.do(req)
 }

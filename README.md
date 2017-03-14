@@ -1,2 +1,5 @@
 # go-umeng-openapi
-golang 友盟openapi sdk
+golang sdk for umeng openapi
+
+
+### 友盟 openapi 的golang 版封装
